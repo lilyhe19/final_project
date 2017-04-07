@@ -1,5 +1,5 @@
 def f(x):
-    return x**2
+    return x**2 +2
 
 def g(x):
     return f(x)**2
