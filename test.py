@@ -6,3 +6,6 @@ def g(x):
 
 def goodbye(name):
     return "Goodbye "+name
+
+def hello(name):
+    return "Hello"
