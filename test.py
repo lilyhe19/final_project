@@ -3,3 +3,6 @@ def f(x):
 
 def g(x):
     return f(x)**2
+
+def goodbye(name):
+    return "Goodbye "+name
