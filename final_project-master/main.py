@@ -8,8 +8,10 @@ def main():
 	print("\
 		\n 1. Look up a doctor by location \
 		\n 2. Calculate your BMI \
-		\n 3. Calculate the number of calories you should consume \
-		\n 4. Access the recommended items checklist")
+		\n 3. Calculate the number of calories you should consume for your age and weight\
+		\n 4. Access the recommended baby items checklist to be prepared for almost any situation \
+		\n 5. Sleep Calculator \
+		\n 6. Weight Based Divided Dose Calculator")
 	print("\n Type \"0\" to quit")
 
 	mainMenuInput = int(input("\n Please type the number of the option you'd like to explore: "))
