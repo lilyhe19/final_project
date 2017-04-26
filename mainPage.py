@@ -1,10 +1,27 @@
 #import math 
-#def main function(x): 
+
+#def main function(x): #input is the number chosen by user 
+
+	#if 1: run the doctor csv 
+	#if 2: run BMI calc 
+	#etc. etc. etc h
 	#pseudocode 
 	#pseudocode
 	#put something here 
 
 	#return function
+
+def BMI calc(height, weight): 
+	'''takes user input of height (inches) and weight (pounds) and returns that BMI''' 
+	BMI is your weight (in kilograms) over your height squared (in centimeters). Let’s calculate, however, using pounds and inches.
+
+	hMetric = height * .025 #convert to 
+	wKG = weight * .45 
+	bmi = wKG / (hMetric*hMetric)
+
+	return bmi 
+
+
 
 
 if __name__ == "__main__": 
@@ -17,11 +34,11 @@ if __name__ == "__main__":
 	print("Type \"0\" to quit")
 	mainMenuInput = int(input("Please type the number that you'd like: "))
 
-	while mainMenuInput != 0: 
+	while mainMenuInput != 0: #0 is quit 
 		if 1 <= mainMenuInput <= 4: 
 			#call each separate method function 
 		else: 
-			mainMenuInput = int(input("Please type a number between 1 and 4: "))
+			mainMenuInput = int(input("Please type a number between 1 and 4: ")) #error check if input is out of range
 
 
 
