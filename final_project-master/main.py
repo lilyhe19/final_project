@@ -17,24 +17,31 @@ def main():
 	mainMenuInput = int(input("\n Please type the number of the option you'd like to explore: "))
 
 	while int(mainMenuInput) != 0:
-		if int(mainMenuInput) not in [1,2,3,4]: #error check if input is out of range
+		if int(mainMenuInput) not in [1,2,3,4, 5,6]: #error check if input is out of range
 			mainMenuInput = input("Please type a number between 1 and 4: ")
-		if mainMenuInput == 1: #call each separate method function
+		elif mainMenuInput == 1: #call each separate method function
 			pass
-		if mainMenuInput == 2:
-			import bmi
+		elif mainMenuInput == 2:
+			import bmi #imports 
 			bmi.BMI() #int(input("height(inches)>> ")),int(input("weight(pounds)>> ")))
+			break 
+		elif mainMenuInput == 3:
+			import calcounter
+			calcounter.calorie_intake(gender, weight, height, age) #why doesn't this work???? 
 			break
-		if mainMenuInput == 3:
+		elif mainMenuInput == 4:
+			pass 
+		elif mainMenuInput == 5: 
 			pass
-		if mainMenuInput == 4:
-			pass
+		elif mainMenuInput == 6: 
+			pass 
 	return
 
 
 if __name__ == "__main__":
 	main()
-	mainMenuReturn = input("\n Would you like to return to the main menu? (y/n)")
+	mainMenuReturn = input("\n Would you like to return to the main menu? (y/n)") 
+	#while mainMenuReturn 
 	if mainMenuReturn == 'y':
 		main()
 	if mainMenuReturn == 'n':
@@ -42,33 +49,4 @@ if __name__ == "__main__":
 		#return
 	else:
 		 print ("Please enter either \"y\" or \"n\".")
-
-
-
-
-
-	"""IGNORE THIS::::: I"M USING IT FROM MY OLD JAVA ASSIGNMENT"
-	println("(C)reate mad-lib, (V)iew mad-lib, (Q)uit? "); #menu of three options
-	do {
-			System.out.println("(C)reate mad-lib, (V)iew mad-lib, (Q)uit? "); //menu of three options
-			menuInput = console.next().toLowerCase(); //converts any letter to lower case
-
-			//error checks if the user types a typo
-			while (!(menuInput.startsWith("c")) && !(menuInput.startsWith("v")) && !(menuInput.startsWith("q"))) {
-				System.out.println("(C)reate mad-lib, (V)iew mad-lib, (Q)uit? ");
-				menuInput = console.next().toLowerCase(); //gives the user another chance to enter a menu option
-			}
-
-			if (!(menuInput.startsWith("q"))) { //user typed in C or V
-				f = fileName(console); //returns a scanner that other methods can use
-
-				if (menuInput.startsWith("c")) { //user wants to create
-
-					fillIn(console, f, inputName);
-				}else if (menuInput.startsWith("v")) { //user chooses "v"
-						viewFile(console, f, inputName);
-				}
-
-			}
-
-		} while (!(menuInput.startsWith("q"))); //program stops running when they press q to quit"""
+		 #problem here where, on second time, it skips to this line bc of the else statement
