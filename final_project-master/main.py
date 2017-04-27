@@ -22,31 +22,33 @@ def main():
 		elif mainMenuInput == 1: #call each separate method function
 			pass
 		elif mainMenuInput == 2:
-			import bmi #imports 
+			import bmi #imports
 			bmi.BMI() #int(input("height(inches)>> ")),int(input("weight(pounds)>> ")))
-			break 
+			break
 		elif mainMenuInput == 3:
 			import calcounter
-			calcounter.calorie_intake(gender, weight, height, age) #why doesn't this work???? 
+			calcounter.calorie_intake()
 			break
 		elif mainMenuInput == 4:
-			pass 
-		elif mainMenuInput == 5: 
 			pass
-		elif mainMenuInput == 6: 
-			pass 
+		elif mainMenuInput == 5:
+			pass
+		elif mainMenuInput == 6:
+			pass
 	return
 
 
 if __name__ == "__main__":
 	main()
-	mainMenuReturn = input("\n Would you like to return to the main menu? (y/n)") 
-	#while mainMenuReturn 
-	if mainMenuReturn == 'y':
-		main()
-	if mainMenuReturn == 'n':
-		print("Thanks for using EZHealth today!")
+	mainMenuReturn = input("\n Would you like to return to the main menu? (y/n)")
+	while mainMenuReturn == "y" or mainMenuReturn == "n":
+		if mainMenuReturn == 'y':
+			main()
+			mainMenuReturn = ""
+			mainMenuReturn= input("\n Would you like to return to the main menu? (y/n)")
+		if mainMenuReturn == 'n':
+			print("Thanks for using EZHealth today!")
 		#return
-	else:
-		 print ("Please enter either \"y\" or \"n\".")
+	else: #if types in wrong
+		 mainMenuReturn = input("Please enter either \"y\" or \"n\".")
 		 #problem here where, on second time, it skips to this line bc of the else statement
