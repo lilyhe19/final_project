@@ -3,8 +3,9 @@ def error(x):
     docstring
     """
 
-    if x == 1:
-        pass
+    while True:
+        if x == 1:
+            pass
 
     while True:
         if x == 2:
@@ -32,8 +33,9 @@ def error(x):
                 repeat3 = input("Please enter either \"y\" or \"n\".")
         break
 
-    elif x == 4:
-        pass
+    while True:
+        if x == 4:
+            pass
 
     while True:
         if x == 5:
@@ -48,10 +50,12 @@ def error(x):
                 repeat5 = input("Please enter either \"y\" or \"n\".")
         break
 
-    elif x == 6:
-        pass
+    while True:
+        if x == 6:
+            pass
 
-    elif x == 7:
-        pass
+    while True:
+        if x == 7:
+            pass
 
     return
