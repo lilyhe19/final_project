@@ -23,7 +23,19 @@ def main():
             mainMenuInput = input("Please type a number between 1 and 4: ")
 
         elif mainMenuInput == 1: #call each separate method function
-            pass
+            import doc_search
+            doc_search.docs()
+            repeat1 = input("Would you like to use this function again? (y/n)  ")
+            while True:
+                if repeat1 == 'y':
+                    import doc_search
+                    doc_search.docs()
+                    repeat1 = input("Would you like to use this function again? (y/n)  ")
+                elif repeat1 == 'n':
+                    break
+                else:
+                    repeat1 = input("Please enter either \"y\" or \"n\".")
+            break
 
         elif mainMenuInput == 2:
             import bmi #imports function
