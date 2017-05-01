@@ -19,9 +19,9 @@ def calorie_intake():
 
 	while gender != "male" and gender != "female":
 		gender= input("Error, please type in gender again")
-	weight= float(input("How much do you weigh in pounds?>> "))
-	height= float(input("How tall are you in inches?>> "))
-	age = float(input("How many years old are you?>> "))
+	weight= float(input("How much do you weigh? (pounds) >> "))
+	height= float(input("How tall are you? (inches) >> "))
+	age = float(input("How old are you? (years) >> "))
 
 	if gender == "male": 
 		x_male= 66+6.2*(weight)+12.7*(height)-6.76*(age)
