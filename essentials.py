@@ -10,15 +10,18 @@ def checklist():
 
     print(items)
 
-    checked = int(input("To check off an item, please enter the corresponding number items you already have (one number at a time only). \n >>"))
+    nums = []
+    numbs = input("To check off an item, please enter the corresponding number items you already have (one number at a time only). \n >>")
+    numbs = numbs.split(",")
+    for x in numbs:
+        if isinstance(int(x), int):
+            nums.append(int(x))
 
-    newlist= [ ]
-    for [a,b,c] in items:
-        if checked == b:
-            a = '(x)'
-            y= [a,b,c]
-    newlist= newlist + [y]
-    print(newlist)
+    for z in nums:
+        for k in items:
+            if k[1] == z:
+                k[0] = '(x)'
+    return print(items)
 
 #y= ['(x)' for a in [a,b,c] if checked == b]
 

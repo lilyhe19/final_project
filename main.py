@@ -23,7 +23,7 @@ def main():
             mainMenuInput = input("Please type a number between 1 and 4: ")
 
         elif mainMenuInput == 1: #call each separate method function
-            import doc_search
+            import doc_search #imports function
             doc_search.docs()
             repeat1 = input("Would you like to use this function again? (y/n)  ")
             while True:
@@ -68,7 +68,19 @@ def main():
             break
 
         elif mainMenuInput == 4:
-            pass
+            import essentials
+            essentials.checklist()
+            repeat4 = input("Would you like to use this function again? (y/n)  ")
+            while True:
+                if repeat4 == 'y':
+                    import essentials
+                    essentials.checklist()
+                    repeat4 = input("Would you like to use this function again? (y/n)  ")
+                elif repeat4 == 'n':
+                    break
+                else:
+                    repeat4 = input("Please enter either \"y\" or \"n\".")
+            break
 
         elif mainMenuInput == 5:
             import sleepcal
