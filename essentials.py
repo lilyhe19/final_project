@@ -11,7 +11,7 @@ def checklist():
     print(items)
 
     nums = []
-    numbs = input("To check off an item, please enter the corresponding number items you already have (one number at a time only). \n >>")
+    numbs = input("To check off certain items, please input a list of the corresponding numbers (separated by commas only), then hit Enter. \n >>")
     numbs = numbs.split(",")
     for x in numbs:
         if isinstance(int(x), int):
