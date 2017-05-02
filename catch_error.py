@@ -2,10 +2,19 @@ def error(x):
     """
     docstring
     """
-
+    
     while True:
         if x == 1:
-            pass
+        repeat1 = input("Would you like to use this function again? (y/n)  ")
+        if repeat1 == 'y':
+            import doc_search
+            doc_search.docs()
+            repeat1 = input("Would you like to use this function again? (y/n)  ")
+        elif repeat1 == 'n':
+            break
+        else:
+            repeat1 = input("Please enter either \"y\" or \"n\".")
+            break
 
     while True:
         if x == 2:
@@ -35,7 +44,15 @@ def error(x):
 
     while True:
         if x == 4:
-            pass
+            repeat3 = input("Would you like to use this function again? (y/n)  ")
+            if repeat4 == 'y':
+                import essentials
+                essentials.checklist()
+                repeat4 = input("Would you like to use this function again? (y/n)  ")
+            elif repeat4 == 'n':
+                break
+            else:
+                repeat4 = input("Please enter either \"y\" or \"n\".")
 
     while True:
         if x == 5:
