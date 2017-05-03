@@ -12,6 +12,16 @@ def docs():
     csv_file = csv.DictReader(open('DoctorSearch.csv'))
     input_city = input("Please type in the name of your city/town. (first letter uppercase, remaining letters in lowercase) \n ->  ")
 
+    #TENTATIVE CODE 
+    # found = False #use boolean to error check
+    
+    # while found == False: 
+    #     for x in row['City']: 
+    #         if input_city != x: 
+    #             found = True
+    #     input_city = input("Please try another city/town. \n ->")
+
+
     closest = [row for row in csv_file if row['City'] == input_city]
 
     first = closest[0]
