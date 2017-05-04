@@ -21,7 +21,7 @@ def checklist():
     #p = 0
     #loop = True
     while loop:
-        num = input("Enter a number corresponding to an item here -> ")
+        num = input("Enter the number corresponding to the item you'd like to check off here -> ")
         p = p + 1
         if num == '-1':
             loop = False
