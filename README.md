@@ -10,7 +10,6 @@ Given more time, we would most definitely have worked on building charts and gra
 
 Despite these shortcomings, we believe we have the beginnings of the best health app the US has yet to see.
 
-HERE **************************************
 To ensure that you have a positive experience with this application, we'd like to provide an introduction on how to use it. The primary file in this entire package is called main.py. This file opens a home page for the application which includes more specific instructions, and allows you to access all the other functions within the package. Each function does something different; short descriptions are provided on the main.py homepage, and longer descriptions appear when you choose to use/run those functions.
 
 Each function takes user input and generates relevant output. They can also be run multiple times and once you have used the function to your heart's content, you are given the option to return to the homepage, as long as you follow the instructions.
