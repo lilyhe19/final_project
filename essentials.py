@@ -25,12 +25,11 @@ def checklist():
         p = p + 1
         if num == 'end':
             loop = False
-        elif num.isdigit() == False:
+        elif num.isdigit() == False: #prevents input from being the wrong type
             print("Oops! Looks like you didn't enter a number. Please start over!")
             return
         elif isinstance(int(num), int) == True:
             nums.append(int(num))
-
 
 
     #for g in set(nums):
