@@ -10,12 +10,10 @@ def checklist():
 
     print(items)
 
-    nums = []
+    nums = [int(x) for x in numbs if isinstance(int(x), int)]
     numbs = input("To check off certain items, please input a list of the corresponding numbers (separated by commas only), then hit Enter. \n >>")
     numbs = numbs.split(",")
-    for x in numbs:
-        if isinstance(int(x), int):
-            nums.append(int(x))
+           
 
     for z in nums:
         for k in items:
