@@ -20,7 +20,7 @@ def main():
 
     while int(mainMenuInput) != 0:
         if int(mainMenuInput) not in [1,2,3,4,5,6,7]: #error check if input is out of range
-            mainMenuInput = input("Please type a number between 1 and 4: ")
+            mainMenuInput = input("Please type a number between 1 and 7: ")
 
         elif mainMenuInput == 1: #call each separate method function
             import doc_search #imports function
