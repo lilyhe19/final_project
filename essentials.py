@@ -16,14 +16,14 @@ def checklist():
 
     #numbs = input("To check off certain items, please input a list of the corresponding numbers (separated by commas only), then hit Enter. \n >>")
 
-    print("Input each number at the arrow, then hit Enter, \n until you reach the end, at which point type in 'end' and hit Enter again")
+    print("Input each number at the arrow, then hit Enter, \n until you reach the end, at which point type in '-1' and hit Enter again")
     nums,p,loop = [],0,True
     #p = 0
     #loop = True
     while loop:
         num = input("Enter a number corresponding to an item here -> ")
         p = p + 1
-        if num == 'end':
+        if num == '-1':
             loop = False
         elif num.isdigit() == False: #prevents input from being the wrong type
             print("Oops! Looks like you didn't enter a number. Please start over!")
