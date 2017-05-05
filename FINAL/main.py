@@ -7,7 +7,7 @@ def main():
     below and on the main.py homepage, and longer descriptions and instructions
     are printed when you choose to use (and thus run) those functions.
     This function also can account for user input error, and a
-    large portion of the instructions are printed when a user runs this program. 
+    large portion of the instructions are printed when a user runs this program.
     """
 
     print("Welcome to EZHealth \n \n We offer the following services:")
@@ -23,14 +23,14 @@ def main():
     mainMenuInput = (input("\n Please type the number of the service you'd like to explore: "))
 
     while mainMenuInput != '0':
-        if mainMenuInput.isdigit() == False: 
+        if mainMenuInput.isdigit() == False:
             mainMenuInput = input("Please type a number from 1 to 5:  ")
 
         elif int(mainMenuInput) not in [1,2,3,4,5]:
             mainMenuInput = input("Please type a number from 1 to 5: ")
 
-        elif int(mainMenuInput) == 1: 
-            import doc_search 
+        elif int(mainMenuInput) == 1:
+            import doc_search
             doc_search.docs()
             repeat1 = input("Would you like to use this function again? (y/n):  ")
             while True:
@@ -45,7 +45,7 @@ def main():
             break
 
         elif int(mainMenuInput) == 2:
-            import bmi 
+            import bmi
             bmi.BMI()
             repeat2 = input("Would you like to use this function again? (y/n):  ")
             while True:
@@ -90,7 +90,6 @@ def main():
             break
 
         elif int(mainMenuInput) == 5:
-            print('aloha')
             import sleepcal_alt
             sleepcal_alt.sleep()
             repeat5 = input("Would you like to use this function again? (y/n):  ")
@@ -121,6 +120,5 @@ if __name__ == "__main__":
         elif mainMenuReturn == 'n':
             print("Thanks for using EZHealth today!")
             break
-        else: 
+        else:
              mainMenuReturn = input("Please enter either \"y\" or \"n\":  ")
-         
