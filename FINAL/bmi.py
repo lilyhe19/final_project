@@ -9,18 +9,10 @@ def BMI():
     \n as calculated by the standard BMI formula (ratio of weight (kg) to height squared (cm)) \
     \n Note: this calculator may not be accurate for infants and very young children.")
 
-#kilograms and centimeters
-#    height = input("height >> ")
-#    weight = input("weight >> ")
-#    hMetric = int(height)
-#    wKG = int(weight)
-#    bmi = wKG /(hMetric**2)
-#    return bmi
 
-#pounds and inches
     height = input("height(inches):  ")
 
-    #prevents denominator from being 0, and unrealistic answer 
+    
     while (height) == "0":  
             height = (input("Please input a nonzero integer for height:  "))
 
@@ -28,23 +20,14 @@ def BMI():
     weight = input("weight(pounds):  ")
     while (weight) == "0": 
             weight = (input("Please input a nonzero integer for weight:  "))
-
+         
     #prevents input from being the wrong type (sourced code from user: jmichalicek @http://stackoverflow.com/questions/5424716/how-to-check-if-string-input-is-a-number)
     if height.isdigit() == False or weight.isdigit() == False: 
         print("Oops! Looks like you didn't enter a number somewhere. Please start over. ")
         return
 
 
-    hMetric = int(height) * .0254 #convert to inches
-    wKG = int(weight) * .453592 #convert to kilograms 
+    hMetric = int(height) * .0254
+    wKG = int(weight) * .453592  
     Bmi = wKG / (hMetric**2)
     print ("Your BMI is " + str(round(Bmi,2)))
-
-#if __name__ == "__main__":
-#Intro
-#Prompt
-#    print("Let's calculate your BMI! \
-#    \n At the prompt, type in only the numbers that quantifies your height or weight, and round off to the nearets whole number\
-#    \n ")
-#Prints the answer
-#    print("Your BMI is", BMI())
