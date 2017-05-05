@@ -2,37 +2,30 @@
 
 def main():
     """
-    docstring
+    This function displays the home page of the EZHealth application and
     """
-    print("Welcome to EZHealth \n \n Here are your options:")
+
+    print("Welcome to EZHealth \n \n We offer the following services:")
     print("\
-        \n 1. Look up a doctor by location \
-        \n 2. Calculate your BMI \
-        \n 3. Calculate the number of calories you should consume for your age and weight\
-        \n 4. Access the recommended baby items checklist to be prepared for almost any situation \
-        \n 5. Sleep Calculator \
-        \n 6. Weight Based Divided Dose Calculator \
-        \n 7. Forum")
+        \n 1. Doctor lookup by location \
+        \n 2. BMI calculator \
+        \n 3. Healthy daily calorie intake calculator\
+        \n 4. Recommended baby items checklist *Great for expecting/new parents!* \
+        \n 5. Healthy daily sleep duration calculator")
 
     print("\n Type \"0\" to quit")
-    mainMenuInput = (input("\n Please type the number of the option you'd like to explore: "))
 
-    return
-
-
-
-
+    mainMenuInput = (input("\n Please type the number of the service you'd like to explore: "))
     #while mainMenuInput.isdigit() == False:
     #    mainMenuInput = (input("\n Please type an integer between 1 and 7 and press Enter"))
     #    return
-def main2():
+
     while mainMenuInput != '0':
         if mainMenuInput.isdigit() == False: #error check if input is out of range
-            mainMenuInput = input("Please type a number between 1 and 7: ")
-            main2()
+            mainMenuInput = input("Please type a number from 1 to 5: ")
 
         elif int(mainMenuInput) not in [1,2,3,4,5,6,7]:
-            mainMenuInput = input("Please type a number between 1 and 7: ")
+            mainMenuInput = input("Please type a number from 1 to 5: ")
 
         elif int(mainMenuInput) == 1: #call each separate method function
             import doc_search #imports function
@@ -109,12 +102,6 @@ def main2():
                 else:
                     repeat5 = input("Please enter either \"y\" or \"n\".")
             break
-
-        elif int(mainMenuInput) == 6:
-            pass
-
-        elif int(mainMenuInput) == 7:
-            pass
 
         else:
             print('uhoh')
