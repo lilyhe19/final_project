@@ -1,5 +1,3 @@
-#import math
-
 def main():
     """
     This function displays the home page of the EZHealth application,
@@ -23,19 +21,16 @@ def main():
     print("\n Type \"0\" to quit")
 
     mainMenuInput = (input("\n Please type the number of the service you'd like to explore: "))
-    #while mainMenuInput.isdigit() == False:
-    #    mainMenuInput = (input("\n Please type an integer between 1 and 7 and press Enter"))
-    #    return
 
     while mainMenuInput != '0':
-        if mainMenuInput.isdigit() == False: #error check if input is out of range
+        if mainMenuInput.isdigit() == False: 
             mainMenuInput = input("Please type a number from 1 to 5:  ")
 
         elif int(mainMenuInput) not in [1,2,3,4,5]:
             mainMenuInput = input("Please type a number from 1 to 5: ")
 
-        elif int(mainMenuInput) == 1: #call each separate method function
-            import doc_search #imports function
+        elif int(mainMenuInput) == 1: 
+            import doc_search 
             doc_search.docs()
             repeat1 = input("Would you like to use this function again? (y/n):  ")
             while True:
@@ -50,7 +45,7 @@ def main():
             break
 
         elif int(mainMenuInput) == 2:
-            import bmi #imports function
+            import bmi 
             bmi.BMI()
             repeat2 = input("Would you like to use this function again? (y/n):  ")
             while True:
@@ -126,6 +121,6 @@ if __name__ == "__main__":
         elif mainMenuReturn == 'n':
             print("Thanks for using EZHealth today!")
             break
-        else: #if types in wrong
+        else: 
              mainMenuReturn = input("Please enter either \"y\" or \"n\":  ")
-         #problem here where, on second time, it skips to this line bc of the else statement
+         
