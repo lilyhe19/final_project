@@ -12,28 +12,20 @@ def docs():
 #convert CSV into a list of dictionaries
     import csv
     csv_file = csv.DictReader(open('DoctorSearch.csv'))
+
     input_city = input("Please type in the name of your city/town. (first letter uppercase, remaining letters in lowercase) \n ->  ")
-    #input_specialty = input("Please type in the name of the medical specialty you are looking for if this is applicable. \n If not, press Enter to continue. (first letter uppercase, remaining letters in lowercase; ie. Radiology, Oncology \n -> ")
 
-    #TENTATIVE CODE
-    # found = False #use boolean to error check
 
-    # while found == False:
-    #     for x in row['City']:
-    #         if input_city != x:
-    #             found = True
-    #     input_city = input("Please try another city/town. \n ->")
+    cities= [row['City'] for row in csv_file]
 
-    cities= [csv_file['City'] 
 
-    if input_city not in cities:
-        input_city = input("City unavailable, please type in another city.")
+    while input_city not in cities:
+        input_city = input("City unavailable, please type in another city.  ")
 
-    #for x in cities:
-        #if x != input_city:
-            #input_city = input("City unavailable, please type in another city.")
 
-    closest = [row for row in csv_file if row['City'] == input_city]
+    csv_file2 = csv.DictReader(open('DoctorSearch.csv'))
+    closest = [row for row in csv_file2 if row['City'] == input_city]
+
 
     first = closest[0]
     second = closest[1]
@@ -42,13 +34,3 @@ def docs():
     print("The three doctors nearest you are: \n 1.", first['First Name'], first['Last Name'], "at", first['Hospital'], "\
     \n 2.",second['First Name'],second['Last Name'],"at",second['Hospital'], "\
     \n 3.",third['First Name'],third['Last Name'],"at",third['Hospital'])
-
-
-
-
-#if __name__ == "__main__":
-#Intro
-#Prompt
-#
-#Prints the answer
-#    print("")
