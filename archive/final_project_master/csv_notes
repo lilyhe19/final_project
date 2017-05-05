@@ -1,0 +1,34 @@
+csv = type of file where data is structured into rows + columns, using commas and new lines; commonly used to represent data in a spreadsheet (like from Excel or Sheets); easy to read programmatically 
+Can use open() and read() and n.split() like with any regular file 
+ 
+read() — makes the computer read the file; necessary step before you can look at it 
+
+n.pop(#) — deletes the line at index # of n, then prints it out
+
+Python comes with a CSV library that makes it extremely easy to turn a CSV file into a list of lists, so that you can parse it more easily
+
+import csv — to access this library of functions
+csv.reader(open()) — to open a csv
+    ***csv.reader isn't exactly a list of lists. It just goes through each line, and then becomes empty. So you can't read from csv_lists twice - the 2nd time it will just be empty. This also means you can't do indexing on it. This is to save memory. 
+    Ex: csv_lists = csv.reader(open("shopping_list.csv"))
+    To read from it >1x, you can convert it into a list after reading it. This will store the entire list in your computer's memory + allow you to use it like a list of lists***
+next() — retrieve the next item from the iterator (if default is given, it is returned if the iterator is exhausted, otherwise StopIteration is raised)
+
+
+A few annoying things about working with this library: 
+1) Have to drop the 1st first row, since it doesn't contain any important data you want
+2) Have to refer to the items by index, so you have to know the index of what you want
+>>> So, try using DictReader (module)              
+        DictReader takes in a CSV + gives you a bunch of dictionaries - 
+    key is the header and 
+    value is the value at that line
+    Ex: csv_file = csv.DictReader(open("shopping_list.csv”))
+
+csv.writer() — 
+
+.writerow() — writes a new row in a csv, can be used in for loops, etc. 
+.writeheader() — writes a new header for the csv
+
+csv.DictWriter() — 
+
+with open() ___ as new.csv: — method in a fragment that allows opening of a new file
