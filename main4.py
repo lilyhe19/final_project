@@ -2,7 +2,14 @@
 
 def main():
     """
-    This function displays the home page of the EZHealth application and
+    This function displays the home page of the EZHealth application,
+    which includes more specific instructions on how to access all the other functions
+    within the package.
+    Each function does something different; short descriptions are provided
+    below and on the main.py homepage, and longer descriptions and instructions
+    are printed when you choose to use (and thus run) those functions.
+    This function also can account for user input error, and a
+    large portion of the instructions are printed when a user runs this program. 
     """
 
     print("Welcome to EZHealth \n \n We offer the following services:")
