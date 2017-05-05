@@ -15,15 +15,21 @@ def main():
         \n 7. Forum")
 
     print("\n Type \"0\" to quit")
-
     mainMenuInput = (input("\n Please type the number of the option you'd like to explore: "))
+
+    return
+
+
+
+
     #while mainMenuInput.isdigit() == False:
     #    mainMenuInput = (input("\n Please type an integer between 1 and 7 and press Enter"))
     #    return
-
+def main2():
     while mainMenuInput != '0':
         if mainMenuInput.isdigit() == False: #error check if input is out of range
             mainMenuInput = input("Please type a number between 1 and 7: ")
+            main2()
 
         elif int(mainMenuInput) not in [1,2,3,4,5,6,7]:
             mainMenuInput = input("Please type a number between 1 and 7: ")
