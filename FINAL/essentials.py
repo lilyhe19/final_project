@@ -16,7 +16,7 @@ def checklist():
     for line in items: #sourced the *line code from user: Jim Farasakis Hilliard @http://stackoverflow.com/questions/38872341/print-list-of-lists-in-separate-lines
         print(*line)
 
-    print("Input each number, then hit Enter, \n until you reach the end, at which point type in '-1' and hit Enter again")
+    print("Input each number, then hit Enter, \n until you reach the end, at which point type in '-1' and hit Enter again \n")
     nums,p,loop = [],0,True
     while loop:
         num = input("Enter the number corresponding to the item you'd like to check off here:  ")
@@ -28,7 +28,7 @@ def checklist():
             return
         elif isinstance(int(num), int) == True:
             nums.append(int(num))
-            
+
     for z in nums: #iterate through the inputted list
         for k in items: #access original full list
             if k[1] == z: #compare if it is in original list

@@ -6,7 +6,7 @@ def calorie_intake():
     '''
 
 	print("This program will calculate number of calories you should consume per day.")
-	print("Please note this calculator may not be accurate for infants and young children.")
+	print("Please note this calculator may not be accurate for infants and young children. \n")
 
 	gender = input("Please type in your birth gender (male/female):  ")
 
