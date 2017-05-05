@@ -9,7 +9,6 @@ def docs():
     \n based on the location you input into this function.")
     print("NOTE: This service is limited to only surrounding MA cities. More locations will be added soon. Thank you for your patience!")
 
-#convert CSV into a list of dictionaries
     import csv
     csv_file = csv.DictReader(open('DoctorSearch.csv'))
 
