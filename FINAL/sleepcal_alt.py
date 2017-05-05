@@ -11,21 +11,21 @@ def sleep():
 
     print("\n This program returns the recommended number of hours of sleep per night \
     \n according to the age-based guidelines set by The National Sleep Foundation. \
-	\n Note: this calculator may not be accurate for infants and very young children.")
+	\n Note: this calculator may not be accurate for infants and very young children.\n ")
 
-    age = (input("Please enter an age (in years):  "))
+    age = (input("Please enter an age (in years): "))
 
     #prevents input from being the wrong type (sourced code from user: jmichalicek @http://stackoverflow.com/questions/5424716/how-to-check-if-string-input-is-a-number)
-    while age.isdigit() == False: 
-        age = input("Error, please enter a positive integer:  ")
+    while age.isdigit() == False:
+        age = input("Error, please enter a positive integer: ")
 
 
     number = int(age)
 
-    while number <= 0: 
+    while number < 0:
         number = input("Please enter an age greater than 0:  ")
 
-    if 0 < number < 3:
+    if 0 <= number < 3:
         rec_hr = '11-14'
     elif 3 <= number < 6:
         rec_hr = '10-13'
@@ -38,4 +38,3 @@ def sleep():
     elif 65 <= number:
         rec_hr = '7-8'
     print("You/your child should sleep", str(rec_hr), "hours every night.")
-
