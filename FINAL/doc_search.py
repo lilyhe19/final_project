@@ -7,7 +7,7 @@ def docs():
     print("\n This program will find three doctors \
     \n from the locations nearest yours in Massachusetts \
     \n based on the location you input into this function.")
-    print("NOTE: This service is limited to only surrounding MA cities. More locations will be added soon. Thank you for your patience!")
+    print("NOTE: This service is limited to only surrounding MA cities. More locations will be added soon. Thank you for your patience! \n")
 
     import csv
     csv_file = csv.DictReader(open('DoctorSearch.csv'))
