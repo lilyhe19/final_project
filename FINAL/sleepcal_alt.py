@@ -39,10 +39,3 @@ def sleep():
         rec_hr = '7-8'
     print("You/your child should sleep", str(rec_hr), "hours every night.")
 
-
-#if __name__ == "__main__":
-
-#    print("This program will tell you how many hours your child should sleep based on his/her age.")
-#    print("This program does apply to infants (children under one year old)")
-#    number = int(input("Please enter in an age (1-17 years): "))
-#    print("Your child should sleep " + str(rec_hr) + " hours.")
