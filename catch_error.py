@@ -2,7 +2,7 @@ def error(x):
     """
     docstring
     """
-    
+
     while True:
         if x == 1:
         repeat1 = input("Would you like to use this function again? (y/n)  ")
@@ -76,3 +76,5 @@ def error(x):
             pass
 
     return
+
+    print("hello")
